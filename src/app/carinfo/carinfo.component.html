@@ -1,0 +1,13 @@
+<div class="car-info">
+    <div class="car-list">
+      <label for="carDropdown">Selecione um Carro:</label>
+      <select [(ngModel)]="selectedCar" (change)="onCarSelected(selectedCar)">
+        <option *ngFor="let car of cars" [ngValue]="car">{{ car.name }}</option>
+      </select>
+    </div>
+    <div class="car-details" *ngIf="selectedCar">
+        <h2>{{ selectedCar.name }}</h2>
+        <p>Description: {{ selectedCar.description }}</p>
+        <p>Value: {{ selectedCar.value }} $</p>
+      </div>
+  </div>

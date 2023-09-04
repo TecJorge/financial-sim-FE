@@ -1,0 +1,14 @@
+<form [formGroup]="myForm">
+  <div class="name-input">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" formControlName="name" required>
+  </div>
+  <div class="numeric-input">
+    <label for="numericInput">Numero de Telemovel (9 digitos):</label>
+    <input type="text" id="numericInput" name="numericInput" formControlName="numericInput" required pattern="[0-9]{9}">
+  </div>
+  <div class="email-input">
+    <label for="emailInput">Email:</label>
+    <input type="text" id="emailInput" formControlName="emailInput">
+  </div>
+</form>

@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<div class="container">
+  <app-radio (optionSelected)="updateSelectedOption($event)"></app-radio>
+  <br>
+  <br>
+  <app-slider [maxValue]="maxValue"></app-slider>
+  <br>
+  <br>
+  <app-car-info [selectedCar]="carInfo" (carInfoChanged)="updateCarInfo($event)"></app-car-info>
+
+  <br>
+  <br>
+  <app-textbox></app-textbox>
+  <br>
+  <br>
+  <button (click)="sendHttpRequest()">Simular</button>
+</div>
